@@ -1,0 +1,35 @@
+<html lang="ko">
+    <head>
+        <title>p02</title>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./p02_instance_lifecycle.js" defer></script>
+        <style>
+            body {
+                padding-left: 12em;
+            }
+
+            code {
+                font-weight: bold;
+                font-size: 1.5em;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>vue instance</h1>
+        <div id="app">
+            {{ a }}
+        </div>
+
+        <hr>
+        <div id="app2">
+            <p>foo: {{ foo }}</p>
+            <button v-on:click="foo = 'baz'">Change foo</button>
+        </div>
+
+        <hr>
+        <div id="app3">
+        </div>
+    </body>
+</html>
