@@ -30,9 +30,8 @@
             <p>Using mustaches: {{ rawHtml }}</p>
             <!-- rawHtml 태그에 건 데이터 바인딩 무시됨 -->
             <p>Using v-html directive: <span v-html="rawHtml"></span></p></p>
+
         </div>
-<<<<<<< HEAD
-=======
 
         <hr>
         <div id="app2">
@@ -48,8 +47,20 @@
             <!-- 조건문은 삼항 연산자를 사용해야 함 -->
             <!-- {{ if (ok) { return message } }} -->
         </div>
+
+        <hr>
+        <div id="app3">
+            <code>v-bind:[attrName]="url"</code>
+            <a v-bind:[attrName]="url">over2.6.0</a><br>
+            <br><br>
+            <code>v-on:[eventName]="msgAlert"</code>
+            <input type="button" v-on:[eventName]="msgAlert" value="over2.6.0">
+            <br><br>
+            <h3>약어</h3>
+            <code>[ v-bind:href="url" ] => [ :href="url" ], 동적바인딩 가능 [ :[attrName] ]</code><br>
+            <code>[ v-on:click="msgAlert" ] => [ @click="msgAlert" ], 동적바인딩 가능 [ @[eventName] ]</code>
+        </div>
         
 
->>>>>>> aeea8b0ab583388ef99af4bd8cc49e5fbda27282
     </body>
 </html>
