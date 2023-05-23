@@ -31,5 +31,25 @@
             <!-- rawHtml 태그에 건 데이터 바인딩 무시됨 -->
             <p>Using v-html directive: <span v-html="rawHtml"></span></p></p>
         </div>
+<<<<<<< HEAD
+=======
+
+        <hr>
+        <div id="app2">
+            <div v-bind:id="dynamicId" style='border: 1px solid black;'> Dynamic id</div>
+            <button v-bind:disabled="isButtonDisabled">Button</button><br>
+            <!-- javascript 표현식 사용 -->
+            {{ number + 1 }}<br>
+            {{ ok ? 'YES' : 'NO' }}<br>
+            {{ message.split('').reverse().join('') }}<br>
+            <div v-bind:id="'list-' + no">{{ no }}</div>
+            <!-- 아래는 표현식이 아닌 구문이기 때문에 안됨-->
+            <!-- {{ var a = 1 }} -->
+            <!-- 조건문은 삼항 연산자를 사용해야 함 -->
+            <!-- {{ if (ok) { return message } }} -->
+        </div>
+        
+
+>>>>>>> aeea8b0ab583388ef99af4bd8cc49e5fbda27282
     </body>
 </html>
