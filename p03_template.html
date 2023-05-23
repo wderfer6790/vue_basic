@@ -23,16 +23,13 @@
             Mustache 보간법, 일반 텍스트로 해석<br>
             <span>메세지: {{ msg }}</span>
             <hr>
-            값을 한 번만 할당할 수 있게 하는 v-once 속성, 같은 노드의 바인딩에도 영향을 미침
-            <span v-once>다시는 변경하지 않습니다: {{ msg }}</span>
+            값을 한 번만 할당할 수 있게 하는 v-once 속성, 같은 노드의 바인딩에도 영향을 미침<br>
+            다시는 변경하지 않습니다: <span v-once>{{ msg }}</span>
             <hr>
             실제 HTML을 출력하려면 v-html 사용
             <p>Using mustaches: {{ rawHtml }}</p>
             <!-- rawHtml 태그에 건 데이터 바인딩 무시됨 -->
             <p>Using v-html directive: <span v-html="rawHtml"></span></p></p>
         </div>
-
-        
-
     </body>
 </html>
