@@ -3,6 +3,8 @@
         <title>p04</title>
         <meta charset="utf-8">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
         <script src="./p04_computed_watch.js" defer></script>
         <style>
             body {
@@ -20,7 +22,35 @@
         <h1>vue template</h1>
 
         <div id="app">
-
+            <h3>computed</h3>
+            message: {{ message }}<br>
+            reverseMessage: {{ reverseMessage }}
+        </div>
+        <hr>
+        <div id="app2">
+            <h3>watch</h3>
+            firstName : <input v-model="firstName"><br>
+            lastName : <input v-model="lastName"><br>
+            fullName : {{ fullName }}<br>
+        </div>
+        <hr>
+        <div id="app3">
+            <h3>computed</h3>
+            firstName : <input v-model="firstName"><br>
+            lastName : <input v-model="lastName"><br>
+            fullName : {{ fullName }}<br>
+        </div>
+        <hr>
+        <div id="app4">
+            <h3>computed setter, getter</h3>
+            new name : <input type="text" id="newName"> <input type="button" @click="setName" value="replace"><br>
+            full name : {{ fullName }}
+        </div>
+        <hr>
+        <div id="app5">
+            <h3>watch</h3>
+            question : <input v-model="question"><br>
+            {{ answer }}
         </div>
     </body>
 </html>
