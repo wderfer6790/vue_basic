@@ -1,0 +1,67 @@
+<html lang="ko">
+    <head>
+        <title>p05</title>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./p05_class_style.js" defer></script>
+        <style>
+            body {
+                padding-left: 12em;
+            }
+
+            code {
+                font-weight: bold;
+                font-size: 1.5em;
+                color: red;
+            }
+
+            .active {
+                color: blue;
+                font-weight: bold;
+            }
+
+            .danger {
+                color: red;
+                font-weight: bold;
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>vue class, style binding</h1>
+
+        <div id="app">
+            <h3>binding class</h3>
+            <code>
+                v-bind:class="{active: isActive, danger: hasError}"<br>
+                v-bind:class="classObj"<br>
+                v-bind:class="[activeClass, dangerClass]"
+            </code>
+            <p v-bind:class="classObj">TEXT</p>
+            <input type="button" v-on:click="changeClass" value="change style">
+        </div>
+        <hr>
+        <div id="app2">
+            <h3>binding class with computed</h3>
+            <p v-bind:class="classObj">TEXT</p>
+        </div>
+        <hr>
+        <div id="app3">
+            <h3>binding class with component</h3>
+            <test-component class="baz boo" key="1"></test-component>
+            <test-component v-bind:class="classObj" key="2"></test-component>
+        </div>
+        <hr>
+        <div id="app4">
+            <h3>binding style</h3>
+            <code>
+                v-bind:style="{color: 'red', fontSize: '12px'}"<br>
+                v-bind:style="styleObj"<br>
+                v-bind:style="[styleObj1, styleObj2]"<br>
+                2.3+) v-bind:style="{display: ['-webkit-box', '-ms-flexbox', 'flex']}" #한 속성에 다중값
+            </code>
+            <p v-bind:style="styleObj">Style</p>
+
+        </div>
+    </body>
+</html>
